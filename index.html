@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Browser Mechanics Lab - Week 2</title>
+  </head>
+  <body>
+    <!-- 
+      Main app container
+      We'll inject three panels here:
+      1. Event Explorer (Act A)
+      2. Box Model + Flex Playground (Act B)
+      3. Modal Lab (Act C)
+    -->
+    <div id="app">
+      <header class="app-header">
+        <h1>🔬 Browser Mechanics Lab</h1>
+        <p class="subtitle">
+          Explore events, layout, and modals—see how the browser actually works
+        </p>
+      </header>
+
+      <main class="main-content">
+        <!-- 
+          TODO: These panels will be populated by your TypeScript modules
+          - eventExplorer.ts will inject content into #event-panel
+          - layoutPlayground.ts will inject content into #layout-panel
+          - modalLab.ts will inject content into #modal-panel
+        -->
+        <section id="event-panel" class="panel" aria-labelledby="event-heading">
+          <h2 id="event-heading" class="sr-only">Event Explorer</h2>
+          <p class="placeholder">Event Explorer panel will appear here</p>
+        </section>
+
+        <section
+          id="layout-panel"
+          class="panel"
+          aria-labelledby="layout-heading"
+        >
+          <h2 id="layout-heading" class="sr-only">Box Model + Flex Playground</h2>
+          <p class="placeholder">Box Model + Flex Playground will appear here</p>
+        </section>
+
+        <section id="modal-panel" class="panel" aria-labelledby="modal-heading">
+          <h2 id="modal-heading" class="sr-only">Modal Lab</h2>
+          <p class="placeholder">Modal Lab will appear here</p>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>
+          Built by <strong>[Your Name]</strong> • Code Camp Week 2 Lab
+        </p>
+      </footer>
+    </div>
+
+    <!-- 
+      Entry point: This script loads main.ts which then imports
+      the three panel modules (eventExplorer, layoutPlayground, modalLab)
+    -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+

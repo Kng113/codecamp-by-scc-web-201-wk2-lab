@@ -1,0 +1,66 @@
+/**
+ * Event Explorer Panel (Act A)
+ *
+ * Goal: Visualize how events flow through the DOM tree
+ * - See event bubbling in action
+ * - Understand event.target vs event.currentTarget
+ * - Compare direct listeners vs delegated listeners
+ * - Experience stopPropagation() effect
+ *
+ * Follow the lab instructions (Act A) step-by-step to implement this.
+ */
+
+// TODO: Step 1 - Grab the panel container
+// Use document.querySelector to find #event-panel
+// Throw an error if it's not found (helps catch typos early)
+// const eventPanel = document.querySelector<HTMLElement>('#event-panel')
+// if (!eventPanel) throw new Error('#event-panel not found')
+
+// TODO: Step 2 - Inject the Event Explorer markup
+// Use innerHTML to add the HTML structure (see lab instructions)
+// Include:
+//   - Header with title and description
+//   - Mode toggle (direct vs delegated listeners)
+//   - stopPropagation checkbox
+//   - Nested boxes (outer → middle → inner)
+//   - Event log section
+//   - Event quiz section
+
+// TODO: Step 3 - Set up logging helper
+// Create a function that appends log entries to #event-log
+// Use prepend() to show newest entries first
+// Format: [mode] handler=label, target=name, currentTarget=name
+
+// TODO: Step 4 - Implement direct listeners mode
+// Attach click listeners directly to .outer, .middle, .inner
+// In each handler, log:
+//   - Handler label (which element)
+//   - event.target (where the click actually happened)
+//   - event.currentTarget (which element's handler is running)
+// Handle stopPropagation checkbox: if checked and handler is "inner", call event.stopPropagation()
+
+// TODO: Step 5 - Implement delegated listener mode
+// Attach ONE click listener to #box-root (the parent)
+// Use event.target and closest('.box') to find which box was clicked
+// Log the same info but note it's coming from the delegated handler
+// This is the pattern you'll use for menus, tables, tag lists, etc.
+
+// TODO: Step 6 - Wire up mode switching
+// Listen for changes on the radio buttons (name="mode")
+// When mode changes:
+//   1. Clean up old listeners (call cleanup function if it exists)
+//   2. Set up new listeners based on selected mode
+//   3. Log a separator line to show the switch
+
+// TODO: Step 7 (Optional but powerful) - Show event phase
+// Extend handlers to log event.eventPhase (1=capture, 2=target, 3=bubble)
+// Also log event.composedPath() to see the full DOM path
+
+// TODO: Step 8 - Add tag list delegation example
+// Add a <ul id="tag-list"> with some <li> items
+// Use ONE delegated listener on the <ul>
+// When a tag is clicked, show it in an output element
+// This demonstrates real-world delegation pattern
+
+export { } // Make this a module
+

@@ -1,231 +1,169 @@
-# 🧪 Week 2 Lab — Event Playground
+# 🧪 Week 2 Lab — Browser Mechanics Lab
 
 **Student Name:** _[Your name here]_  
 **Date Started:** _[Date]_  
-**Date Completed:** _[Date]_
-**Effective time taken (in hours)**: _[time in hours here]_
+**Date Completed:** _[Date]_  
+**Effective time taken:** _[time in hours]_
 
 ---
 
 ## 🔗 Live Links
 
 **Firebase URL:** _[Paste your deployed URL here]_  
-**Demo GIF/Video:** _[Link to your demo recording or GIF]_
+**Demo Video:** _[Link to your 60-second demo video]_
 
 ---
 
-## ⏱️ Time Tracking
+## 📋 Project Overview
 
-| Section | Time Spent | Notes |
-|---------|------------|-------|
-| Part A: Base Setup | ___ min | |
-| Part B: Live Form Feedback | ___ min | |
-| Part C: Event Delegation (Todo) | ___ min | |
-| Part D: Accessible Modal | ___ min | |
-| Part E: Key & Focus Tracker | ___ min | |
-| Part F: Accessibility & Deployment | ___ min | |
-| **Total** | **___ min** | |
+This lab builds a **Browser Mechanics Lab**—a single-page app with three interactive panels that let you see and control how the browser works:
+
+1. **Event Explorer** — Visualize event bubbling, delegation, and `stopPropagation()`
+2. **Box Model + Flex Playground** — Feel CSS layout physics with live controls
+3. **Modal Lab** — Build an accessible modal with proper focus management
+
+**Tech Stack:** Vite + TypeScript (vanilla, no React) + Firebase Hosting
 
 ---
 
-## 📝 Quiz Answers
+## 🚀 Getting Started
 
-### Part A — Base Setup
+### Prerequisites
 
-1. **What does `defer` do in the `<script>` tag?**
-   
-   _Your answer:_
+- Node.js 18+ installed
+- pnpm installed
+- Firebase CLI installed and logged in
+- Git configured
 
-2. **What's the difference between `.container` and `.grid` in your CSS?**
-   
-   _Your answer:_
+### Setup
 
-3. **Why is it important to set `box-sizing: border-box;` globally?**
-   
-   _Your answer:_
+```bash
+# Install dependencies
+pnpm install
 
----
+# Start development server
+pnpm dev
 
-### Part B — Live Form Feedback
+# Open http://localhost:5173
+```
 
-1. **Why do we call `preventDefault()` on form submission?**
-   
-   _Your answer:_
+### Build & Deploy
 
-2. **What's the purpose of `aria-live="polite"` in the small error elements?**
-   
-   _Your answer:_
+```bash
+# Type check
+pnpm typecheck
 
-3. **When would you prefer HTML5 validation over custom JS validation?**
-   
-   _Your answer:_
+# Lint
+pnpm lint
 
----
+# Format code
+pnpm format
 
-### Part C — Event Delegation
+# Build for production
+pnpm build
 
-1. **What's the difference between `target` and `currentTarget` in an event?**
-   
-   _Your answer:_
-
-2. **Why is delegation more efficient than adding a listener to each button?**
-   
-   _Your answer:_
-
-3. **How could you extend this todo list (e.g., persist data)?**
-   
-   _Your answer:_
+# Deploy to Firebase
+firebase deploy
+```
 
 ---
 
-### Part D — Accessible Modal
+## 📝 Implementation Checklist
 
-1. **What role and aria attribute make a modal accessible?**
-   
-   _Your answer:_
+### Act A — Event Explorer
 
-2. **What happens if you forget to return focus to the last element?**
-   
-   _Your answer:_
+- [ ] Panel container found and markup injected
+- [ ] Nested boxes visible (outer → middle → inner)
+- [ ] Direct listeners mode working
+- [ ] Delegated listener mode working
+- [ ] Mode toggle switches between modes
+- [ ] Event log shows target vs currentTarget
+- [ ] stopPropagation checkbox affects log output
+- [ ] Tag list delegation example working
+- [ ] Event phase/composedPath logged (optional)
 
-3. **Why should modals close on `Esc` even if there's a close button?**
-   
-   _Your answer:_
+### Act B — Box Model + Flex Playground
 
----
+- [ ] Box Model section with sliders
+- [ ] Padding/margin/border controls update demo box
+- [ ] box-sizing dropdown switches between content-box/border-box
+- [ ] Metrics display shows content and total dimensions
+- [ ] Flex Playground section added
+- [ ] Flex controls (direction/justify/align/gap) work
+- [ ] Layout "poses" achievable
+- [ ] Box Model target drill completed
 
-### Part E — Key & Focus Tracker
+### Act C — Modal Lab
 
-1. **What's the difference between `focus` and `focusin`?**
-   
-   _Your answer:_
-
-2. **Why do we wrap `updateFocus` in `setTimeout` on focusout?**
-   
-   _Your answer:_
-
-3. **How can this tracker help when debugging big apps?**
-   
-   _Your answer:_
-
----
-
-### Part F — Accessibility & Deployment
-
-1. **What's the main benefit of testing Lighthouse in mobile mode?**
-   
-   _Your answer:_
-
-2. **Why do screen readers rely on focus order?**
-   
-   _Your answer:_
-
-3. **How could you further improve performance without changing HTML?**
-   
-   _Your answer:_
-
----
-
-## ✅ Acceptance Checklist
-
-| Requirement | Status | Notes |
-|------------|--------|-------|
-| Form validates live + on submit | ☐ | |
-| Todo works via **one listener** (delegation) | ☐ | |
-| Modal accessible + focus trap | ☐ | |
-| Key & Focus tracker updates | ☐ | |
-| Keyboard navigation works end-to-end | ☐ | |
-| Visible focus rings on all interactive elements | ☐ | |
-| Firebase URL publicly accessible | ☐ | |
-| Lighthouse: Accessibility ≥ 90 | ☐ | Score: ___ |
-| Lighthouse: Best Practices ≥ 90 | ☐ | Score: ___ |
-| No console errors | ☐ | |
+- [ ] Modal markup with correct ARIA attributes
+- [ ] Backdrop and modal styled
+- [ ] openModal() function implemented
+- [ ] closeModal() function implemented
+- [ ] Focus moves into modal on open
+- [ ] Focus trap works (Tab/Shift+Tab stay inside)
+- [ ] ESC key closes modal
+- [ ] Focus returns to correct trigger button
+- [ ] Backdrop click closes modal
+- [ ] Two trigger buttons both work correctly
 
 ---
 
 ## 💡 What I Learned
 
-### Key Concepts I Understood
+### Event Explorer
 
-_Write 3-5 sentences about the most important things you learned:_
+_Write 2-3 sentences about what you learned about events:_
 
 1. 
-
 2. 
 
-3. 
+### Box Model + Flex
+
+_Write 2-3 sentences about what you learned about layout:_
+
+1. 
+2. 
+
+### Modal & Focus
+
+_Write 2-3 sentences about what you learned about accessibility:_
+
+1. 
+2. 
 
 ---
 
-### Challenges I Faced
+## 🐛 Challenges & Solutions
 
-_Describe any bugs, errors, or confusion you encountered and how you solved them:_
-
----
-
-### What Surprised Me
-
-_What was unexpected or "aha!" moment during this lab?_
-
----
-
-## 🚀 Reflection Prompt
-
-1. **Which event type felt most powerful today?**
-   
-   _Your answer:_
-
-2. **Where else in life have you seen event-driven systems?**
-   
-   _Your answer:_
-
-3. **What new habit did you build during this lab?**
-   
-   _Your answer:_
-
----
-
-## 📸 Screenshots (Optional)
-
-_Add screenshots of your working app, Lighthouse scores, or interesting debugging moments:_
-
----
-
-## 🎬 Ship Clip
-
-_If you created a 10-15s reel/video, paste the link here:_
-
-**Caption used:** _[Your social media caption]_  
-**Hashtags:** #ShipWeek2 #CodeCampBySCC
-
----
-
-## 🛠️ Troubleshooting Log
-
-_If you encountered issues, document them here for future reference:_
+_Describe any bugs or confusion you encountered and how you solved them:_
 
 | Issue | Solution | Time Lost |
 |-------|----------|-----------|
-| _e.g., Form not submitting_ | _Added preventDefault()_ | _5 min_ |
+| _e.g., Event log not updating_ | _Forgot to call prepend() instead of append()_ | _10 min_ |
 
 ---
 
-## 📚 Resources I Used
+## 📚 Resources Used
 
-_List any MDN docs, Stack Overflow threads, or other resources that helped:_
-
-- 
-- 
+- [MDN: Event Bubbling](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)
+- [MDN: CSS Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [MDN: Flexbox Basics](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [WAI-ARIA Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 
 ---
 
-## 🎯 Goals for Next Week
+## ✅ Acceptance Checklist
 
-_What do you want to improve or learn next?_
-
-1. 
-2. 
-3. 
+- [ ] All three panels functional
+- [ ] Event Explorer shows bubbling/delegation correctly
+- [ ] Box Model metrics update live
+- [ ] Flex controls change layout immediately
+- [ ] Modal has proper focus trap
+- [ ] ESC closes modal and restores focus
+- [ ] Keyboard navigation works throughout
+- [ ] No console errors
+- [ ] Deployed to Firebase
+- [ ] 60-second demo video recorded
 
 ---
 
@@ -234,5 +172,5 @@ _What do you want to improve or learn next?_
 
 ---
 
-> *"If Week 1 taught the web to **think**, Week 2 taught it to **respond** — to me."*  
+> _"If Week 1 taught the web to think, Week 2 taught it to respond—to me."_  
 > — _[Your name]_, Code Camp by SCC
