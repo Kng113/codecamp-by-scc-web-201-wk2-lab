@@ -49,18 +49,29 @@
 // Listen for changes on the radio buttons (name="mode")
 // When mode changes:
 //   1. Clean up old listeners (call cleanup function if it exists)
+//      Note: For direct listeners, cleanup clones nodes (removes listeners).
+//            For delegated listeners, cleanup uses removeEventListener.
+//      After cleanup, setupDirectListeners/setupDelegatedListener will re-query
+//      elements, so stale references aren't an issue.
 //   2. Set up new listeners based on selected mode
 //   3. Log a separator line to show the switch
 
 // TODO: Step 7 (Optional but powerful) - Show event phase
 // Extend handlers to log event.eventPhase (1=capture, 2=target, 3=bubble)
 // Also log event.composedPath() to see the full DOM path
+// This really helps you understand how events flow through the DOM tree!
+// Consider making this required - it's very educational.
 
-// TODO: Step 8 - Add tag list delegation example
-// Add a <ul id="tag-list"> with some <li> items
+// TODO: Step 8 - Add tag list delegation example (Drill B)
+// Option A: Add tag list HTML in Step 2 (in the main markup)
+// Option B: Add it separately here as a new section
+// Either way works! Include:
+//   - <ul id="tag-list"> with <li> items (each with data-tag attribute)
+//   - <p id="tag-output"> to show which tag was clicked
 // Use ONE delegated listener on the <ul>
-// When a tag is clicked, show it in an output element
-// This demonstrates real-world delegation pattern
+// When a tag is clicked, use event.target and closest('li') to find the clicked tag
+// Show the tag name in the output element
+// This demonstrates real-world delegation pattern (menus, tables, dynamic lists)
 
 export { } // Make this a module
 

@@ -59,18 +59,25 @@
 // TODO: Step 8 - Implement focus trap
 // Add keydown listener to modal element
 // Handle:
-//   - ESC key → closeModal()
+//   - ESC key → event.preventDefault(), then closeModal()
 //   - Tab key:
-//     - If Shift+Tab and focus is on first element → focus last element
-//     - If Tab and focus is on last element → focus first element
-//     - Prevent default behavior to trap focus
+//     - Get focusable elements using getFocusableElements(modal)
+//     - Find first and last focusable elements
+//     - Get current focused element: document.activeElement
+//     - If Shift+Tab (backwards):
+//       - If on first element OR not in focusables → preventDefault(), focus last
+//     - If Tab (forwards):
+//       - If on last element OR not in focusables → preventDefault(), focus first
+//     - This creates a "trap" - focus can't escape the modal
 
 // TODO: Step 9 - Create getFocusableElements helper
 // Function that finds all focusable elements in a container:
-//   - a[href], button, textarea, input, select
-//   - [tabindex]:not([tabindex="-1"])
-//   - Exclude disabled and aria-hidden elements
+//   - Use querySelectorAll with: 'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+//   - Filter out disabled elements: !el.hasAttribute("disabled")
+//   - Filter out aria-hidden elements: !el.getAttribute("aria-hidden")
+//   - Return Array.from(...) to convert NodeList to Array
 // Returns array of HTMLElements
+// This helper is used by both openModal (to focus first element) and focus trap (to cycle through)
 
 // TODO: Step 10 - Test accessibility
 // - Open modal, try Tab/Shift+Tab (should stay inside)

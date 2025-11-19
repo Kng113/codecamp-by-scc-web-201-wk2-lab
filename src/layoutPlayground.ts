@@ -19,8 +19,10 @@
 //   - Header
 //   - Controls: sliders for padding, margin, border width
 //   - Dropdown for box-sizing (content-box vs border-box)
+//     Note: Set border-box as default (selected) - it's more common in modern CSS
 //   - Demo box element
 //   - Metrics display (content width/height, total width/height)
+//   - Optional: Add a "target" hint for Drill A (see instructions)
 
 // TODO: Step 3 - Add CSS for Box Model visualization
 // Style the demo box, controls, and metrics panel
@@ -39,8 +41,9 @@
 // TODO: Step 5 - Add Flex Playground section
 // Inject markup for:
 //   - Flex controls (direction, justify-content, align-items, gap)
+//     Note: Set reasonable defaults: row, flex-start, stretch, gap 12px
 //   - Flex container with 3 demo cards
-//   - List of "poses" (layout challenges)
+//   - List of "poses" (layout challenges) - see instructions for the three poses
 
 // TODO: Step 6 - Wire up Flex controls
 // Listen for changes on flex direction, justify, align, gap controls
