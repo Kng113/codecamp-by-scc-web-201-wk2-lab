@@ -15,15 +15,20 @@
 // Throw an error if it's not found (helps catch typos early)
 // const eventPanel = document.querySelector<HTMLElement>('#event-panel')
 // if (!eventPanel) throw new Error('#event-panel not found')
+// Note: We check for null here because querySelector can return null.
+//       Later, after injecting HTML with innerHTML, we can use ! (non-null assertion)
+//       because we know those elements exist.
 
 // TODO: Step 2 - Inject the Event Explorer markup
 // Use innerHTML to add the HTML structure (see lab instructions)
+// Why innerHTML? For static markup injected once, it's simpler than createElement.
+// We use innerHTML because the HTML is static and we're not dealing with user input.
 // Include:
 //   - Header with title and description
 //   - Mode toggle (direct vs delegated listeners)
 //   - stopPropagation checkbox
 //   - Nested boxes (outer → middle → inner)
-//   - Event log section
+//   - Event log section (with aria-live="polite" for screen readers)
 //   - Event quiz section
 
 // TODO: Step 3 - Set up logging helper

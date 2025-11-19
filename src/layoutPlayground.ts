@@ -34,9 +34,12 @@
 //   1. Read current slider/select values
 //   2. Apply them to demoBox.style
 //   3. Calculate and display metrics:
-//      - Total size: use getBoundingClientRect()
+//      - Total size: use getBoundingClientRect() (returns actual rendered size)
 //      - Content size: total - padding - border
 //   4. Show the difference between content-box and border-box
+// Why getBoundingClientRect()? It returns the actual rendered size including transforms.
+// offsetWidth only includes padding/border, not transforms. For accurate visual
+// measurements, getBoundingClientRect() is the right choice.
 
 // TODO: Step 5 - Add Flex Playground section
 // Inject markup for:

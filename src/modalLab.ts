@@ -24,7 +24,7 @@
 //     - role="dialog"
 //     - aria-modal="true"
 //     - aria-labelledby pointing to modal title
-//     - tabindex="-1" (so it can receive focus programmatically)
+//     - tabindex="-1" (makes it focusable programmatically but removes from tab order)
 //     - Title, content, close button, extra button (for focus trap testing)
 
 // TODO: Step 3 - Add CSS for modal
@@ -69,6 +69,8 @@
 //     - If Tab (forwards):
 //       - If on last element OR not in focusables → preventDefault(), focus first
 //     - This creates a "trap" - focus can't escape the modal
+// Why preventDefault()? Without it, the browser's default Tab behavior would
+// move focus outside the modal. We prevent that and manually control focus instead.
 
 // TODO: Step 9 - Create getFocusableElements helper
 // Function that finds all focusable elements in a container:
