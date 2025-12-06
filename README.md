@@ -1,8 +1,8 @@
 # 🧪 Week 2 Lab — Browser Mechanics Lab
 
-**Student Name:** _[Your name here]_  
-**Date Started:** _[Date]_  
-**Date Completed:** _[Date]_  
+**Student Name:** Karma Namgyal Ghale 
+**Date Started:** 12/02/2025
+**Date Completed:**   
 **Effective time taken:** _[time in hours]_
 
 ---
@@ -168,7 +168,7 @@ _Describe any bugs or confusion you encountered and how you solved them:_
 ---
 
 **Submission Date:** _[Date & Time]_  
-**Ready for TA Review:** ☐ Yes ☐ No
+**Ready for TA Review:**  Yes ☐ No
 
 ---
 
