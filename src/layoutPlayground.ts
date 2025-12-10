@@ -56,6 +56,49 @@ layoutPanel.innerHTML = `
       </dl>
     </section>
 
+  </section>
+  <section class="flex-lab">
+    <h3>Flex Layout</h3>
+    <p>Change direction, justification, alignment, and gap. Watch cards move.</p>
+    <div class="flex-controls">
+      <label>Direction
+        <select id="flex-dir">
+          <option value="row" selected>row</option>
+          <option value="column">column</option>
+        </select>
+      </label>
+      <label>Justify-content
+        <select id="flex-justify">
+          <option value="flex-start" selected>flex-start</option>
+          <option value="center">center</option>
+          <option value="space-between">space-between</option>
+          <option value="space-around">space-around</option>
+        </select>
+      </label>
+      <label>Align-items
+        <select id="flex-align">
+          <option value="stretch" selected>stretch</option>
+          <option value="flex-start">flex-start</option>
+          <option value="center">center</option>
+          <option value="flex-end">flex-end</option>
+        </select>
+      </label>
+      <label>Gap
+        <input type="range" id="flex-gap" min="0" max="48" value="12">
+      </label>
+    </div>
+      <div class="flex-target" id="flex-target">
+      <div class="card">One</div>
+      <div class="card">Two</div>
+      <div class="card">Three</div>
+      </div>
+
+    <ul class="flex-poses">
+      <li>Pose 1: three cards in a row, centered horizontally & vertically</li>
+      <li>Pose 2: column layout, cards packed at the top with equal gaps</li>
+      <li>Pose 3: row layout, first card left, last card right</li>
+    </ul>
+
   </section>`
 
 // TODO: Step 3 - Add CSS for Box Model visualization
@@ -128,50 +171,6 @@ updateBoxModel();
 //     Note: Set reasonable defaults: row, flex-start, stretch, gap 12px
 //   - Flex container with 3 demo cards
 //   - List of "poses" (layout challenges) - see instructions for the three poses
-layoutPanel.innerHTML += `
-  <section class="flex-lab">
-    <h3>Flex Layout</h3>
-    <p>Change direction, justification, alignment, and gap. Watch cards move.</p>
-    <div class="flex-controls">
-      <label>Direction
-        <select id="flex-dir">
-          <option value="row" selected>row</option>
-          <option value="column">column</option>
-        </select>
-      </label>
-      <label>Justify-content
-        <select id="flex-justify">
-          <option value="flex-start" selected>flex-start</option>
-          <option value="center">center</option>
-          <option value="space-between">space-between</option>
-          <option value="space-around">space-around</option>
-        </select>
-      </label>
-      <label>Align-items
-        <select id="flex-align">
-          <option value="stretch" selected>stretch</option>
-          <option value="flex-start">flex-start</option>
-          <option value="center">center</option>
-          <option value="flex-end">flex-end</option>
-        </select>
-      </label>
-      <label>Gap
-        <input type="range" id="flex-gap" min="0" max="48" value="12">
-      </label>
-    </div>
-      <div class="flex-target" id="flex-target">
-      <div class="card">One</div>
-      <div class="card">Two</div>
-      <div class="card">Three</div>
-      </div>
-
-    <ul class="flex-poses">
-      <li>Pose 1: three cards in a row, centered horizontally & vertically</li>
-      <li>Pose 2: column layout, cards packed at the top with equal gaps</li>
-      <li>Pose 3: row layout, first card left, last card right</li>
-    </ul>
-
-  </section>`
 
 // TODO: Step 6 - Wire up Flex controls
 // Listen for changes on flex direction, justify, align, gap controls
