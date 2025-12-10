@@ -3,13 +3,12 @@
 **Student Name:** Karma Namgyal Ghale 
 **Date Started:** 12/02/2025
 **Date Completed:**   
-**Effective time taken:** _[time in hours]_
-
----
+**Effective time taken:** 6-8hrs
+----
 
 ## 🔗 Live Links
 
-**Firebase URL:** _[Paste your deployed URL here]_  
+**Firebase URL:** https://cc-karma-wk2-lab.web.app/
 **Demo Video:** _[Link to your 60-second demo video]_
 
 ---
@@ -114,22 +113,22 @@ firebase deploy
 
 _Write 2-3 sentences about what you learned about events:_
 
-1. 
-2. 
+1. Events flow from top to target and propagate from target to top when called.
+2. Events listners are called in the parents class when called to the child class and cant be stopped propagating.
 
 ### Box Model + Flex
 
 _Write 2-3 sentences about what you learned about layout:_
 
-1. 
-2. 
+1. Box model consist of padding, margin and border.
+2. Flex box allows free movements of free spaces row or colmn wise.
 
 ### Modal & Focus
 
 _Write 2-3 sentences about what you learned about accessibility:_
 
-1. 
-2. 
+1. Modal allows to pop up dialogue for user friedly interation.
+2. Modal and focus also can add event listeners from the key board input.
 
 ---
 
@@ -167,10 +166,10 @@ _Describe any bugs or confusion you encountered and how you solved them:_
 
 ---
 
-**Submission Date:** _[Date & Time]_  
+**Submission Date:** 6th dec, 2025
 **Ready for TA Review:**  Yes ☐ No
 
 ---
 
 > _"If Week 1 taught the web to think, Week 2 taught it to respond—to me."_  
-> — _[Your name]_, Code Camp by SCC
+> — Karma Namgyal Ghale, Code Camp by SCC
